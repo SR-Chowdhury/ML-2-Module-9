@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML-2 | Module 9 - Grid Area</title>
+    <style>
+        body {
+            max-width: 1240px;
+            margin: 0 auto;
+        }
+
+        .header {
+            grid-area: header;
+        }
+
+        .nav {
+            grid-area: nav;
+        }
+
+        .main {
+            grid-area: main;
+        }
+
+        .aside {
+            grid-area: aside;
+        }
+
+        .adv {
+            grid-area: adv;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+
+        .container {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: 1fr 4fr 1fr;
+            grid-template-areas:
+                "header header header header"
+                "nav main main aside"
+                "nav main main adv"
+                "footer footer footer footer"
+            ;
+        }
+
+        header,
+        nav,
+        main,
+        aside,
+        .adv,
+        footer {
+            background-color: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+        }
+
+        .nav ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav ul li {
+            list-style: none;
+        }
+
+        @media screen and (max-width: 576px) {
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "header"
+                    "nav"
+                    "main"
+                    "aside"
+                    "adv"
+                    "footer"
+                ;
+            }
+        }
+
+        @media screen and (min-width: 577px) and (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr 3fr;
+                grid-template-areas:
+                    "header header header"
+                    "nav nav nav"
+                    "aside main main"
+                    "adv footer footer"
+                ;
+            }
+
+            .nav ul li {
+                display: inline;
+                margin-right: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h3>This is Header</h3>
+        </header>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Nav - 1</a></li>
+                <li><a href="#">Nav - 2</a></li>
+                <li><a href="#">Nav - 3</a></li>
+                <li><a href="#">Nav - 4</a></li>
+            </ul>
+        </nav>
+        <main class="main">
+            <article>
+                <h1>This is Main Content</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore, tempora architecto quod
+                    perspiciatis magni, ipsum dicta debitis nisi impedit repellat provident deserunt natus molestiae
+                    eius! Saepe delectus laborum tempore debitis, repudiandae tenetur corrupti illo soluta iure facere
+                    aspernatur vel facilis totam omnis, ipsam sapiente numquam ipsum ad. Necessitatibus magni, qui
+                    accusamus reiciendis dolor iure blanditiis at magnam vel debitis repellat esse veniam quam maxime.
+                    Et architecto earum error sequi, rem cupiditate at alias officia labore voluptates, neque similique
+                    perspiciatis accusantium veritatis omnis quisquam. Pariatur, sequi! Nulla officia iste in voluptate
+                    fuga, officiis veritatis voluptatibus. Itaque voluptas error at in tenetur tempore deleniti.
+                    Suscipit, iste velit repellat cupiditate cumque dolor excepturi doloremque unde nam odio sit
+                    nesciunt incidunt sunt et minus voluptatibus consequuntur quod tempore molestias maiores autem.
+                    Asperiores modi ad sapiente, soluta dolores deserunt quae deleniti, ea in ipsa sed possimus minima
+                    voluptate ut alias inventore quasi labore, maiores aperiam? Laboriosam neque voluptatum ab cumque
+                    impedit eveniet velit. Optio ducimus praesentium, velit dolor at, doloribus similique accusamus
+                    tenetur eaque magni autem explicabo ut nulla quas, cupiditate aliquid amet excepturi molestias atque
+                    harum sunt quis maxime soluta. Eius obcaecati ratione cupiditate adipisci repellat veniam totam
+                    error repellendus accusantium natus corporis ex eos, iusto voluptas exercitationem dolor animi
+                    tenetur impedit ducimus modi quidem! Cupiditate exercitationem, neque error veritatis doloribus
+                    nobis cumque enim architecto tenetur earum laboriosam vel magni expedita, sint ad, voluptatibus
+                    sapiente laborum quo corporis asperiores rem aliquid. Suscipit tempora repellendus illum officia
+                    magnam quibusdam asperiores autem. Tempora hic autem tempore.</p>
+            </article>
+        </main>
+        <aside class="aside">
+            <h3>Sidebar</h3>
+        </aside>
+        <div class="adv">
+            <h3>Adertise</h3>
+        </div>
+        <footer class="footer">
+            <p>This is footer</p>
+        </footer>
+    </div>
+</body>
+
+</html>
